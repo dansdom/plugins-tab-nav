@@ -14,23 +14,11 @@ ins {text-decoration:none}
 del {text-decoration:line-through}
 img,a img {border:0}
 h1 {font-size:30px;text-align:center;line-height:5em}
-#wrap {margin:0 auto;background:#fff;padding:50px 0;overflow:visible;width:80%;margin:0 auto;font-size:13px}
-li {font-size:14px;line-height:40px;text-align:center;background:#eee}
-.zero {font-size:14px;line-height:40px;text-align:center;background:url(ticker1.png) 0 -495px;display:block;text-indent:-9000px;}
-.clock > div {width:220px;height:55px;margin:0 5px;border-radius:10px;margin-bottom:100px;}
-.clock > div label {float:right;line-height:55px;display:block;height:55px;padding:0 15px 0 5px;font-weight:bold;width:80px;text-indent:5px;font-size:16px}
-.clock .tens, .clock .ones {box-shadow:3px 3px 5px rgba(0,0,0,0.7);border-radius:7px}
-.clock .tens {margin-right:5px !important}
-.clock ul {}
-.clock ul li {background:url(ticker1.png);text-indent:-9000px}
-.clock ul li.n0 {background-position:0 -495px}
-.clock ul li.n2 {background-position:0 -55px}
-.clock ul li.n3 {background-position:0 -110px}
-.clock ul li.n4 {background-position:0 -165px}
-.clock ul li.n5 {background-position:0 -220px}
-.clock ul li.n6 {background-position:0 -275px}
-.clock ul li.n7 {background-position:0 -330px}
-.clock ul li.n8 {background-position:0 -385px}
-.clock ul li.n9 {background-position:0 -440px}
-
-
+#wrap {margin:0 auto;background:#fff;padding:50px 0;overflow:hidden;width:80%;margin:0 auto;font-size:13px}
+.tabPanel1, .tabPanel2 {width:600px;margin:0 auto 50px}
+.tabNav {width:100%;overflow:hidden;height:30px;margin:0;padding:0}
+.tabNav li {list-style:none;display:block;line-height:30px;float:left;width:auto;margin-right:3px;}
+.tabNav li a {display:block;float:left;width:auto;line-height:30px;height:30px;padding:0px 20px;-webkit-border-radius:5px 5px 0 0;-moz-border-radius:5px 5px 0 0;border-radius:5px 5px 0 0}
+.tabNav li a:hover, .tabNav li.active a {background:#eee;color:#000}
+.tabContent {border:1px solid #eee;-webkit-border-radius:0 0 5px 5px;-moz-border-radius:0 0 5px 5px;border-radius:0 0 5px 5px;height:200px}
+.tabContent .tab {display:none;padding:20px}

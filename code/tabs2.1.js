@@ -60,26 +60,31 @@
             this.el.nav.children().bind(this.opts.inputEvent + '.' + this.namespace, function() {
                 // get the index
                 tabs.el.index = $(this).parent().children().index(this);
-                // remove active class then add it to current item
+                tabs.showTab(tabs.el.index);
+                    
+                return false;
+            }); 
+            
+        },
+        showTab : function(index) {
+            var tabs = this;
+            // remove active class then add it to current item
                 tabs.el.nav.children().removeClass(tabs.opts.activeClass);
-                $(this).addClass(tabs.opts.activeClass);
+                tabs.el.nav.children(":eq(" + index + ")").addClass(tabs.opts.activeClass);
                 // hide tab
                 tabs.el.content.children().css("display","none");
                 // if fade effect then fade it, else just display block
                 if (tabs.opts.fadeIn)
                 {
-                    tabs.el.content.children(":eq(" + tabs.el.index + ")").fadeIn(tabs.opts.fadeSpeed);
+                    tabs.el.content.children(":eq(" + index + ")").fadeIn(tabs.opts.fadeSpeed);
                     
                 }
                 else
                 {
-                    tabs.el.content.children(":eq(" + tabs.el.index + ")").css("display","block");
+                    tabs.el.content.children(":eq(" + index + ")").css("display","block");
                 }   
                 // if there is an on open function then call it
-                tabs.opts.onOpen();            
-                return false;
-            }); 
-            
+                tabs.opts.onOpen();        
         },
         getFirstTab : function()
         {
